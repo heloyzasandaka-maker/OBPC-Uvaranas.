@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Peça seu Burguer OBPC e ajude na reforma da nossa igreja!">
+    <title>Burguer OBPC | OBPC Uvaranas</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="topo">
+    <div class="logo">OBPC <span>UVARANAS</span></div>
+    <p>Uma deliciosa forma de ajudar!</p>
+</header>
+
+<main>
+
+    <section class="banner">
+        <div class="banner-conteudo">
+            <span class="etiqueta">AÇÃO SOLIDÁRIA</span>
+            <h1>BURGUER OBPC</h1>
+            <p>Seu lanche ajuda na reforma da nossa igreja!</p>
+        </div>
+    </section>
+
+    <section class="pedido">
+
+        <div class="produto">
+
+            <img
+                src="https://images.unsplash.com/photo-1571091718767-18b5b1457add?auto=format&fit=crop&w=1000&q=85"
+                alt="Hambúrguer"
+            >
+
+            <span class="especial">ESPECIAL OBPC</span>
+
+            <h2>Burguer OBPC</h2>
+
+            <p class="descricao">
+                Um delicioso hambúrguer preparado especialmente para você!
+            </p>
+
+            <p class="preco">R$ 15,00</p>
+
+            <div class="quantidade">
+                <button type="button" id="btnMenos">−</button>
+                <span id="quantidade">1</span>
+                <button type="button" id="btnMais">+</button>
+            </div>
+
+            <p class="legenda">Quantidade de hambúrgueres</p>
+
+            <hr>
+
+            <h3>🥤 Refrigerante mini 200 ml</h3>
+            <p class="preco-refri">R$ 3,00 cada</p>
+
+            <div class="quantidade">
+                <button type="button" id="btnRefriMenos">−</button>
+                <span id="quantidadeRefri">0</span>
+                <button type="button" id="btnRefriMais">+</button>
+            </div>
+
+            <p class="legenda">Quantidade de refrigerantes</p>
+
+        </div>
+
+        <div class="formulario">
+
+            <h2>Faça seu pedido</h2>
+            <p class="subtitulo">Preencha seus dados para continuar.</p>
+
+            <label for="nome">Seu nome</label>
+            <input type="text" id="nome" placeholder="Digite seu nome">
+
+            <label for="telefone">Seu WhatsApp</label>
+            <input type="tel" id="telefone" placeholder="(00) 00000-0000">
+
+            <label for="tipoEntrega">Como deseja receber?</label>
+            <select id="tipoEntrega">
+                <option value="">Selecione uma opção</option>
+                <option value="Entrega">Entrega</option>
+                <option value="Retirada na igreja">Retirada na igreja</option>
+            </select>
+
+            <div id="dadosEntrega" class="dados-entrega">
+
+                <label for="endereco">Endereço de entrega</label>
+                <input type="text" id="endereco" placeholder="Rua, número e bairro">
+
+                <label for="referencia">Ponto de referência</label>
+                <input type="text" id="referencia" placeholder="Ex.: próximo à escola">
+
+                <p class="aviso-entrega">
+                    Taxa de entrega: R$ 8,00
+                </p>
+
+            </div>
+
+            <label for="pagamento">Forma de pagamento</label>
+            <select id="pagamento">
+                <option value="">Selecione uma opção</option>
+                <option value="PIX">PIX</option>
+                <option value="Cartão">Cartão</option>
+                <option value="Dinheiro">Dinheiro</option>
+            </select>
+
+            <div id="pixInfo" class="pix-info">
+
+                <h3>Pagamento via PIX</h3>
+
+                <p><strong>Chave PIX:</strong></p>
+                <p class="chave-pix">42 99930-4153</p>
+
+                <p><strong>Favorecido:</strong> Wagner Notargiacomo</p>
+
+                <p class="aviso-pix">
+                    Após realizar o pagamento, envie o comprovante pelo WhatsApp.
+                </p>
+
+            </div>
+
+            <div class="resumo">
+
+                <h3>Resumo do pedido</h3>
+
+                <div class="linha">
+                    <span>Hambúrgueres:</span>
+                    <span id="resumoQuantidade">1</span>
+                </div>
+
+                <div class="linha">
+                    <span>Subtotal dos hambúrgueres:</span>
+                    <span id="resumoSubtotal">R$ 15,00</span>
+                </div>
+
+                <div class="linha">
+                    <span>Refrigerantes:</span>
+                    <span id="resumoQuantidadeRefrigerante">0</span>
+                </div>
+
+                <div class="linha">
+                    <span>Subtotal dos refrigerantes:</span>
+                    <span id="resumoSubtotalRefrigerante">R$ 0,00</span>
+                </div>
+
+                <div class="linha" id="linhaTaxaEntrega" style="display:none;">
+                    <span>Taxa de entrega:</span>
+                    <span>R$ 5,00</span>
+                </div>
+
+                <div class="total">
+                    <span>TOTAL:</span>
+                    <span id="total">R$ 15,00</span>
+                </div>
+
+            </div>
+
+            <button type="button" id="btnWhatsApp" class="botao-pedido">
+                CONFIRMAR PEDIDO PELO WHATSAPP
+            </button>
+
+            <p class="seguranca">
+                Seu pedido será enviado diretamente para o WhatsApp da OBPC Uvaranas.
+            </p>
+
+        </div>
+
+    </section>
+
+</main>
+
+<footer>
+    <p>OBPC Uvaranas</p>
+    <p>❤️ Obrigado por apoiar a reforma da nossa igreja!</p>
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
