@@ -1,10 +1,11 @@
+
 document.addEventListener("DOMContentLoaded", function () {
 
     const WHATSAPP = "5542999304153";
 
     const PRECO_HAMBURGUER = 15;
     const PRECO_REFRIGERANTE = 3;
-    const TAXA_ENTREGA = 5;
+    const TAXA_ENTREGA = 8;
 
     let quantidade = 1;
     let quantidadeRefri = 0;
@@ -47,7 +48,6 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     function calcularTotal() {
-
         const subtotalHamburguer = quantidade * PRECO_HAMBURGUER;
         const subtotalRefri = quantidadeRefri * PRECO_REFRIGERANTE;
 
@@ -59,7 +59,6 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     function atualizarResumo() {
-
         const subtotalHamburguer = quantidade * PRECO_HAMBURGUER;
         const subtotalRefri = quantidadeRefri * PRECO_REFRIGERANTE;
 
@@ -70,7 +69,6 @@ document.addEventListener("DOMContentLoaded", function () {
         resumoSubtotal.textContent = formatarMoeda(subtotalHamburguer);
 
         resumoQuantidadeRefrigerante.textContent = quantidadeRefri;
-
         resumoSubtotalRefrigerante.textContent =
             formatarMoeda(subtotalRefri);
 
@@ -110,7 +108,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // MOSTRAR ENDEREÇO DE ENTREGA
     tipoEntrega.addEventListener("change", function () {
-
         if (tipoEntrega.value === "Entrega") {
             dadosEntrega.style.display = "block";
         } else {
@@ -122,7 +119,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // MOSTRAR INFORMAÇÕES DO PIX
     pagamento.addEventListener("change", function () {
-
         if (pagamento.value === "PIX") {
             pixInfo.style.display = "block";
         } else {
@@ -134,7 +130,6 @@ document.addEventListener("DOMContentLoaded", function () {
     const telefone = document.getElementById("telefone");
 
     telefone.addEventListener("input", function () {
-
         let valor = telefone.value.replace(/\D/g, "");
 
         if (valor.length > 11) {
@@ -237,7 +232,6 @@ Valor: ${formatarMoeda(subtotalRefri)}
 `;
 
         if (entrega === "Entrega") {
-
             mensagem += `
 📦 *FORMA DE RECEBIMENTO:*
 Entrega
@@ -247,14 +241,11 @@ Entrega
 
 🚚 Taxa de entrega: ${formatarMoeda(TAXA_ENTREGA)}
 `;
-
         } else {
-
             mensagem += `
 📦 *FORMA DE RECEBIMENTO:*
 Retirada na igreja
 `;
-
         }
 
         mensagem += `
@@ -263,7 +254,6 @@ ${formaPagamento}
 `;
 
         if (formaPagamento === "PIX") {
-
             mensagem += `
 📲 Chave PIX: 42 99930-4153
 👤 Favorecido: Wagner Notargiacomo
